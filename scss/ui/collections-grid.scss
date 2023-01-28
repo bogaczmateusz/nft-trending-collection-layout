@@ -1,0 +1,32 @@
+.collections-grid {
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: em(-15px) em(-15px) 0;
+    }
+
+    &-item {
+        width: 33.333333%;
+        flex: 0 0 33.333333%;
+        padding: em(15px);
+    }
+
+    /* MEDIA QUERIES */
+
+    @media (max-width: 659px) {
+        &-item {
+            width: 50%;
+            flex: 0 0 50%;
+        }
+    }
+
+    @media (max-width: 499px) {
+        &-items {
+            display: block;
+        }
+
+        &-item {
+            width: 100%;
+        }
+    }
+}

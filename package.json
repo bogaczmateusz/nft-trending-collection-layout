@@ -1,0 +1,23 @@
+{
+  "name": "boilerplate",
+  "description": "HTML boilerplate.",
+  "version": "1.0.0",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-if": "^3.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^5.0.0",
+    "gulp-util": "^3.0.8",
+    "sass": "^1.49.9",
+    "uglify-es": "^3.3.9"
+  },
+  "dependencies": {}
+}

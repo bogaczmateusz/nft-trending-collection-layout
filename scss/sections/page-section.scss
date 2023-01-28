@@ -1,0 +1,47 @@
+.page-section {
+    display: block;
+    width: 100%;
+    padding: em(80px) 0;
+
+    &-header {
+        + * {
+            margin-top: em(60px);
+        }
+    }
+
+    &-headline {
+        font-size: em(38px);
+        font-weight: 600;
+        color: $white;
+
+        + .page-section-subline {
+            margin-top: em(10px, 22px);
+        }
+    }
+
+    &-subline {
+        font-size: em(22px);
+        font-weight: 300;
+        color: $white;
+    }
+
+    /* MEDIA QUERIES */
+
+    @media (max-width: 991px) {
+        padding: em(40px) 0;
+
+        &-header + * {
+            margin-top: em(30px);
+        }
+    }
+
+    @media (max-width: 767px) {
+        &-headline {
+            font-size: em(30px);
+        }
+
+        &-subline {
+            font-size: em(18px);
+        }
+    }
+}

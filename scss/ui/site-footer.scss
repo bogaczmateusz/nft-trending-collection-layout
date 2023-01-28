@@ -1,0 +1,215 @@
+.site-footer {
+    font-weight: 300;
+    padding: em(40px) 0;
+
+    &-columns {
+        display: flex;
+        flex-wrap: wrap;
+        margin: em(-15px) em(-15px) 0;
+    }
+
+    &-column {
+        flex: 1;
+        padding: em(15px) em(15px) 0;
+
+        &.is-info {
+            width: 33.333333%;
+            flex: 0 0 33.333333%;
+        }
+
+        &.is-navigation {
+            width: calc((240/1075) * 100%);
+            flex: 0 0 calc((240/1075) * 100%);
+        }
+
+        &.is-newsletter {
+            .newsletter-form {
+                margin-top: em(20px);
+            }
+        }
+    }
+
+    &-headline {
+        @extend .font-secondary;
+        font-size: em(22px);
+        font-weight: 700;
+        color: $white;
+        margin-bottom: em(30px, 22px);
+
+        &.has-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: em(45px, 22px);
+
+            > span {
+                position: absolute;
+                top: em(-3px, 22px);
+                left: 0;
+                display: block;
+                width: em(33px, 22px);
+                height: em(33px, 22px);
+
+                > img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &-logo {
+        display: block;
+        width: em(240px);
+        max-width: 100%;
+        margin-bottom: em(30px);
+
+        a {
+            display: block;
+            width: 100%;
+
+            > img {
+                display: block;
+                width: 100%;;
+            }
+        }
+    }
+
+    &-socials {
+        margin-top: em(20px);
+
+        &-headline {
+            font-weight: 300;
+            color: $lightgray;
+            margin-bottom: em(15px);
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            > li {
+                margin-right: em(10px);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+
+                    &:hover > span {
+                        opacity: 0.45;
+                    }
+
+                    > span {
+                        position: relative;
+                        display: block;
+                        width: em(30px);
+                        height: em(30px);
+                        transition: opacity .3s ease;
+
+                        > img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-navigation {
+        ul {
+            li {
+                margin-bottom: em(20px);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    display: inline-block;
+                    color: $lightgray;
+                    transition: color .3s ease;
+
+                    &:hover {
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
+
+    &-copyrights {
+        display: block;
+        margin-top: em(30px);
+        padding-top: em(20px);
+        border-top: 1px solid #858584;
+
+        p {
+            font-size: em(12px);
+            color: $lightgray;
+        }
+    }
+
+    /* MEDIA QUERIES */
+
+    @media (max-width: 991px) {
+        &-headline {
+            font-size: em(20px);
+            margin-bottom: em(20px, 20px);
+        }
+
+        &-column {
+            &.is-newsletter {
+                width: 100%;
+                flex: 0 0 100%;
+                padding-top: em(30px);
+            }
+
+            &.is-info,
+            &.is-navigation {
+                width: 50%;
+                flex: 0 0 50%;
+            }
+        }
+    }
+
+    @media (max-width: 579px) {
+        &-columns {
+            display: block;
+            margin-top: 0;
+        }
+
+        &-column {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: em(35px);
+
+            &.is-info,
+            &.is-newsletter,
+            &.is-navigation {
+                width: 100%;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            &.is-newsletter {
+                padding-top: 0;
+            }
+        }
+
+        .generic-text-content br {
+            display: none;
+        }
+    }
+}

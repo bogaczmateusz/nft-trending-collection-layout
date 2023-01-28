@@ -1,0 +1,15 @@
+.generic-text-content {
+    p {
+        margin: 0 0 em(15px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.text-lightgray {
+        * {
+            color: $lightgray;
+        }
+    }
+}

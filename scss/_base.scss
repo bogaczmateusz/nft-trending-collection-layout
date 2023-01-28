@@ -1,0 +1,41 @@
+*,
+:after,
+:before {
+    outline: 0;
+	box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+body {
+	@extend .font-primary;
+	font-size: $font-size;
+	font-weight: 400;
+    line-height: 1.2;
+}
+
+.container {
+    display: block;
+    width: em(1105px);
+    max-width: 100%;
+    padding: 0 em(30px);
+    margin: 0 auto;
+}
+
+.bg-darkgray {
+    background-color: $darkgray;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+#page-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}

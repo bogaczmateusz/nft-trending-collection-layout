@@ -1,0 +1,44 @@
+.newsletter-form {
+    &-control {
+        display: block;
+    }
+
+    &-input {
+        display: flex;
+
+        > input {
+            position: relative;
+            @extend .font-primary;
+            font-weight: 600;
+            flex: 1;
+            min-height: 100%;
+            border: 0;
+            padding: em(19px) em(45px) em(19px) em(20px);
+            margin-right: em(-40px);
+            border-radius: em(20px);
+            overflow: hidden;
+            transform: translate3d(0, 0, 0);
+
+            &::placeholder {
+                font-weight: 400;
+                color: $darkgray;
+            }
+        }
+
+        > button {
+            min-height: 100%;
+            width: em(180px);
+            flex: 0 0 em(180px);
+        }
+    }
+
+    /* MEDIA QUERIES */
+
+    @media (min-width: 992px) and (max-width: 1023px), (max-width: 479px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 13px;
+    }
+}
