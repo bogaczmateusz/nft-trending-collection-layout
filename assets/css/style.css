@@ -2,7 +2,7 @@
   font-family: "Work Sans", sans-serif;
 }
 
-.font-secondary, .collection-card-photos-item > a > span > p, .site-footer-headline {
+.font-secondary, .collection-card-photos-item > a > span > span, .site-footer-headline {
   font-family: "Space Mono", monospace;
 }
 
@@ -393,7 +393,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.collection-card-photos-item > a > span > p {
+.collection-card-photos-item > a > span > span {
   font-size: 1.375em;
   font-weight: 700;
   color: #FFFFFF;
@@ -455,19 +455,21 @@ body {
   transition: color 0.3s ease;
 }
 @media (max-width: 991px) {
-  .collection-card-photos-item > a > span > p {
+  .collection-card-photos-item > a > span > span {
     font-size: 1em;
   }
 }
 @media (max-width: 767px) {
-  .collection-card-photos-item > a > span > p {
-    font-size: 0.875em;
-  }
   .collection-card-headline {
     font-size: 1.25em;
   }
   .collection-card-author p {
     font-size: 0.875em;
+  }
+}
+@media (max-width: 499px) {
+  .collection-card {
+    font-size: 1.375em;
   }
 }
 

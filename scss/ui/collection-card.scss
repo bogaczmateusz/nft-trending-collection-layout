@@ -48,7 +48,7 @@
                         object-fit: cover;
                     }
 
-                    > p {
+                    > span {
                         @extend .font-secondary;
                         font-size: em(22px);
                         font-weight: 700;
@@ -127,16 +127,12 @@
     /* MEDIA QUERIES */
 
     @media (max-width: 991px) {
-        &-photos-item > a > span > p {
+        &-photos-item > a > span > span {
             font-size: em(16px);
         }
     }
 
     @media (max-width: 767px) {
-        &-photos-item > a > span > p {
-            font-size: em(14px);
-        }
-
         &-headline {
             font-size: em(20px);
         }
@@ -146,5 +142,9 @@
                 font-size: em(14px);
             }
         }
+    }
+
+    @media (max-width: 499px) {
+        font-size: em(22px);
     }
 }
